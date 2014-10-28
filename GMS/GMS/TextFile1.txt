@@ -1,0 +1,36 @@
+﻿Sub ss()
+Dim ns As NameSpace
+
+Set ns = ThisOutlookSession.GetNamespace("MAPI")
+
+aa = Dir("X:\WORK\mails\M*.pst")
+While aa <> ""
+If aa <> "KAZ_02.pst" Then
+
+ns.AddStore ("X:\WORK\mails\" & aa)
+End If
+aa = Dir
+Wend
+
+End Sub
+
+Sub rr()
+Dim ns As NameSpace
+
+Set ns = ThisOutlookSession.GetNamespace("MAPI")
+
+Dim st As Store
+Dim fol As Folder
+For Each st In ns.Stores
+
+If Left(st.FilePath, 3) = "X:\" Then
+Set fol = st.GetRootFolder()
+ns.RemoveStore fol
+
+End If
+
+Next
+
+
+
+End Sub
