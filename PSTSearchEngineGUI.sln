@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSTSeachEngineGUI", "WindowsFormsApplication1\PSTSeachEngineGUI.csproj", "{B5355677-4B60-4A02-AF3D-26B844D8ADC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSTSeachEngineGUI", "PSTSearchEngineGUI\PSTSearchEngineGUI.csproj", "{B5355677-4B60-4A02-AF3D-26B844D8ADC1}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PSTSearchEngine", "PSTSearchEngine\PSTSearchEngine.vdproj", "{D4DD83B8-E22B-4172-A7F0-D0A5D6178004}"
 EndProject
