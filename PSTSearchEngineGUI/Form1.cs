@@ -32,9 +32,18 @@ namespace PSTSearchEngineGUI
                 if (Properties.Settings.Default.CataloguePath.Trim().Length>0)
                 {
                     this.CataloguesPath = Properties.Settings.Default.CataloguePath;
+                    this.toolStripStatusLabel1.Text = "OSE Path: "+this.CataloguesPath;
                 }
                 else
                 {
+                   System.IO.DirectoryInfo di =new System.IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+                   System.IO.DirectoryInfo osedi= di.CreateSubdirectory("PSTSearchEngine").CreateSubdirectory("OSECatalogue");
+                   Properties.Settings.Default.CataloguePath = osedi.FullName;
+                   Properties.Settings.Default.Save();
+                   this.CataloguesPath = Properties.Settings.Default.CataloguePath;
+                   this.toolStripStatusLabel1.Text = "OSE Path: " + this.CataloguesPath;
+
+                    /*
                     DialogResult dr = MessageBox.Show("Do You Want To Select Catalogue Folder?", "Catalogue Folder Alert", MessageBoxButtons.YesNoCancel);
                     if (dr == DialogResult.Yes)
                     {
@@ -58,7 +67,7 @@ namespace PSTSearchEngineGUI
                     {
                         this.Close();
                         return;
-                    }
+                    }*/
                 }
                 this.PSTPath = Properties.Settings.Default.PSTPath;
             }
@@ -215,6 +224,7 @@ namespace PSTSearchEngineGUI
                 Properties.Settings.Default.Save();
 
                 this.CataloguesPath = Properties.Settings.Default.CataloguePath;
+                this.toolStripStatusLabel1.Text = "OSE Path: " + this.CataloguesPath;
                 
 
             }
