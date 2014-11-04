@@ -1356,7 +1356,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:PST Search Engine"
         "ProductCode" = "8:{57D7944D-4F95-4FFF-8F1D-9339A2316707}"
-        "PackageCode" = "8:{FF38F8C7-7B0A-4453-8B8E-B7B00EF08D96}"
+        "PackageCode" = "8:{FB3C9A37-18FA-4253-ADDB-1F3FE0573162}"
         "UpgradeCode" = "8:{9498B8FB-097B-4280-A3F2-90374FF566CF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
